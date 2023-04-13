@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Login System</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="div1">
+
+        <div class="studinfo">
+    
+          <div class="card">
+    
+            <div class="cardDetails">
+              <div class="img"></div>
+              <p class="text-title">Student</p>
+              <p><span id='gswid'></span></p>
+              <!-- this is the only one i added--!>
+                      <!--this is the back button where it will take you back to the hompage-->
+              <button type="button" onclick="window.location.href = 'index.html';"> BACK
+              </button>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+    
+      </div>
+    <script>
+      //this is where the data is getting recived from and being stored under where the 913 is suppose to be shown
+     // const localStudentId = sessionStorage.getItem('idholder');
+      //document.getElementById('gswid').textContent = localStudentId;
+
+      //this is the code for when they leve something blank 2/27/2023
+      function validateForm() {
+        var x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+          alert("Please enter your first name");//need to enter the first name or it wont submit
+          return false;
+        }
+        var x = document.forms["myForm"]["lname"].value;//need to enter the last name or it wont submit
+        if (x == "") {
+          alert("Please enter last name");
+          return false;
+        }
+        var x = document.forms["myForm"]["phonenumber"].value;//need to enter the phone number or it wont submit
+        if (x == "") {
+          alert("Please enter your phone number");
+          return false;
+        }
+        var x = document.forms["myForm"]["email"].value;//need to enter the email or it wont submit
+        if (x == "") {
+          alert("Please enter a email");
+          return false;//this means the form will not be submit if it returns false.
+        }
+
+
+      }
+
+    </script>
+    <script>
+      document.getElementById("gswid").innerHTML = window.location.search; // you will have to parse
+//call by this pass value name.
+      //so its holding the value under passValue in local storage. dose the id need to be diffrent or is it not coming there to  this page? its not coming to the page we need the name
+      //still no buno? yes no worky ill look into it
+      //ok. 
+   </script>
+
+
+
+
+  </div>
+  <div class="div2">
+
+    <div class="guestinfo">
+
+      <h1>Guest info</h1>
+      <form method="POST" action="/guestsign" onsubmit="return validateForm()">
+        <!--this is connected to the script by               using the key word validateForm() -->
+
+       
+        
+            
+        <input hidden type="text" name="gswid" id="gswid">
+            
+        <br><br>
+        <label>First Name: </label>
+        <br>
+        <input type="text" name="fname" id="name" placeholder="Enter your First Name">
+        <br><br>
+        <label>Last Name: </label>
+        <br>
+        <input type="text" name="lname" id="name" placeholder="Enter your Last Name">
+        <br><br>
+        <label>Phone Number</label>
+        <br>
+        <input type="number" name="phonenum" id="name" placeholder="Enter your phone number">
+        <br><br>
+        <label>Email: </label>
+        <br>
+        <input type="email" name="email" id="name" placeholder="Enter Your Valid Email">
+        <br><br>
+        <input type="submit" value="submit" name="submit" id="submit">
+        <br><br>
+      </form>
+    </div>
+  </div>

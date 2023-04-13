@@ -1,0 +1,347 @@
+*{
+  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    table-layout:fixed;
+    
+}
+
+body{
+    background: linear-gradient(170deg, #eda808, #9f7513,#00205b);
+    margin:0;padding:0;
+}
+
+.div1{
+    
+    width: 40%;
+    float: left;
+    height: 100vh;
+    min-width: 300px;
+}
+.div1 .studinfo{
+    padding: 10%;
+    width: 85%;
+    margin: auto;
+    height: 60vh;
+    margin-top: 30%;
+    
+    margin-bottom: 30px;
+    border-radius: 50px;
+    
+    
+    padding-top: 20px;
+    background: transparent;
+    
+}
+
+.div1 .i{
+    size: 700px;
+}
+
+.card {
+    width: auto;
+    
+   height: 105%;
+    
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+   
+    border: 2px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .cardDetails {
+    color: black;
+    height: 100%;
+    gap: .10em;
+    display: grid;
+    place-content: center;
+    text-align: center;
+   }
+   
+   .textBody {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 40px;
+    font-weight: bolder;
+   }
+ 
+   .card .img {
+
+    width: 200px;
+    height: 200px;
+    background: #e8e8e8;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+   }
+   
+/*========================================================*/
+.div2{
+    
+    width: 60%;
+    float: right;
+    height: 100vh;
+    position: sticky;
+   justify-content: space-around;
+   min-width: 300px;
+}
+
+.div2 .guestinfo{
+    padding: 10%;
+    width: 85%;
+    margin: auto;
+    height: 67vh;/*this has been changed 3/6/2023*/
+
+    /*this is to make it ceneter in screen*/
+    margin-top: 20%;
+    margin-bottom: 10px;
+    border-radius: 50px;
+   
+    background-color: #f5f5f5;
+    border: 2px solid #c3c6ce;
+    text-align: left;
+    /*paddign the word guest info*/
+    padding-top: 40px;
+    
+    max-width:100%;
+    min-width: 100px;
+    min-height: 100px;
+    /*this is the shadow around the box*/
+    box-shadow: 20px 20px 60px #9f7513,
+    -20px -20px 60px #9f7513 ;
+    
+    
+
+}
+
+.guestinfo h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+
+
+form#register{
+
+max-width:100%;
+min-width: 100px;
+min-height: 100px;
+
+}
+/*this is for the text under guest info*/
+label{
+    font-family: sans-serif;
+    font-size: 19px;
+    text-decoration: double;
+    font-weight: bolder;
+   
+    
+}
+
+
+ /*this is for the form boxes*/
+input#name{
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    padding: 20px; 
+    width: 100%;
+    height: 60px; 
+       
+}
+/*this is for the building specfick box (was added on 3/6/2023)*/
+select#name{
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    padding: 20px; 
+    width: 100%;
+    height: 60px; 
+}
+
+/*=============================================================================*/
+/*button desing*/
+input#submit{
+    width: 150px;
+ padding: 4px 12px ;
+ border: none;
+ border-radius: 7px;
+ background: linear-gradient(#00205b,#00205b);
+ color: #fff;
+
+ font-size: 20px;
+ font-family: sans-serif;
+
+}
+button:focus {
+    background: linear-gradient(#eda808,#eda808);
+    outline: 3px solid #eda808;   
+}
+
+/*back button================================*/
+.card button {
+    margin-top: 10%;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: linear-gradient(#00205b,#00205b);
+    color: #fff;
+    border: 1px solid #00205b;
+ 
+    
+              
+  }
+  
+  
+  button:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+               -4px -4px 12px #ffffff;
+  }
+
+  /*========================================================================================================================*/
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1364px) and (orientation:landscape) {
+    .div2{
+    
+        width: 60%;
+        float: right;
+        height: 400px;
+        position: sticky;
+       justify-content: space-around;
+       min-width: 300px;
+    }
+    /*was added on 3/6/2023*/
+    .div2 .guestinfo{
+
+        height: 70vh;
+
+    }
+   
+    input#name{
+        border-radius: 12px;
+        background: rgb(255, 255, 255);
+    
+        width: 100%;
+        height: 50px; 
+       
+        
+    }
+    select#name{
+        border-radius: 12px;
+        background: rgb(255, 255, 255);
+    
+        width: 100%;
+        height: 50px; 
+        
+    }
+    .guestinfo h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    form#register{
+
+        max-width:100%;
+        max-height:50%;
+        
+    
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 16px;
+            text-decoration: double;
+            font-weight: bolder;
+           
+            
+        }
+
+        .card .img {
+
+            width: 170px;
+            height: 170px;
+            background: #e8e8e8;
+            border-radius: 100%;
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 50px;
+           }
+               
+  }
+    /*========================================================================================================================*/
+  @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+    .div2{
+    
+        width: 60%;
+        float: right;
+        height: 400px;
+        position: sticky;
+       justify-content: space-around;
+       min-width: 300px;
+    }
+    /*was added on 3/6/2023*/
+    .div2 .guestinfo{
+
+        height: 73vh;
+
+    }
+   
+    input#name{
+        border-radius: 12px;
+        background: rgb(255, 255, 255);
+    
+        width: 100%;
+        height: 50px; 
+       
+        
+    }
+    select#name{
+        border-radius: 12px;
+        background: rgb(255, 255, 255);
+    
+        width: 100%;
+        height: 50px; 
+        
+    }
+    .guestinfo h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    form#register{
+
+        max-width:100%;
+        max-height:50%;
+        
+    
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 16px;
+            text-decoration: double;
+            font-weight: bolder;
+           
+            
+        }
+
+        .card .img {
+
+            width: 170px;
+            height: 170px;
+            background: #e8e8e8;
+            border-radius: 100%;
+            margin: auto;
+            margin-top: 0px;
+            margin-bottom: 50px;
+           }
+               
+  }

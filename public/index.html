@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Login System</title>
+  <!--style sheet link-->
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <SCRIPT language=Javascript>
+    //this scrpit only allows numbers to be entered into the mainFormPage form
+    function numOnly(evt) {
+      var charCode = (evt.which) ? evt.which : event.keyCode
+      if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+
+      return true;
+    }
+
+
+  </SCRIPT>
+<script>
+  //this is the new one scrip that what i created. you have to add onclick="saveData() on the <button class="button"
+  function saveData() {
+    const name = document.getElementById('gswid').value;
+    localStorage.setItem('gswid', name);
+
+  }
+
+
+  function checkForm() {
+            // Get the value of the input field
+            var name = document.getElementById("gswid").value;
+
+            // Check if the field is empty
+            if (name === "") {
+                // If it is empty, no message show show due to it being a required fild.
+                
+                return false; // Prevent the form from submitting
+            } else {
+                // If it is not empty, redirect to the desired page
+                window.location.href = "secondmenu.html";
+                return false; // Prevent the form from submitting
+            }
+            }
+
+</script>
+
+
+
+</head>
+
+
+<body>
+
+  <div class="container">
+    <div class="div-form">
+      <h1> Welcome to Pines </h1>
+      <form action="secondmenu.html" name="form1" id="mainFormPage">
+        <div class="inp">
+          
+          <!--This is where teh student that live in the doerms will enter their 913     (secondmenu.html)-->
+          <i class="studentuser"></i>
+
+          
+          <!--I have set this to only 9 char can be entered-->
+
+          <input type="text" name="gswid"  id="gswid" onkeypress="return numOnly(event)" placeholder="GSW ID"
+            maxlength="9" required>
+        </div>
+
+        <button class="button" type="submit" id="btnInsert" value="btnInsert"  onclick="getTxt()" >Sign In</button>
+
+      </form>
+      <script>
+        function getTxt(){
+            var txtValue = document.getElementById("gswid").value;
+            localStorage.setItem("gswid",txtValue);
+        }
+    </script>
+      <!-- <script>
+        //this scrip is taking the data from the form from the first page and sending it to the next page so it can all be called from the second page
+        const form = document.getElementById('mainFormPage');
+        const nameid = document.getElementById('gswid');
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const nameIdnameidValue = nameid.value;
+          //this is so this the ids will set only during the sesion and clear out after the sesion has ended
+          sessionStorage.setItem('idholder', nameIdnameidValue);
+
+          window.location.href = "secondmenu.html";
+
+        })
+
+
+      </script> -->
+      
+    </div>
+    <div class="div-text">
+
+      <img src="GSW-Badge-1C-white (1).png" alt="GSWbage">
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
